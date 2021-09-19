@@ -40,11 +40,14 @@ def id_disply(update: Update, context: CallbackContext):
             user = message.reply_to_message.from_user
     else:
         user = message.chat
-    message.reply_html(
-        f'{mention(user.id, user.full_name if user.full_name != None else user.title)}'
-        f'\nID: <code>{user.id}</code>'
-        f'\n{("@"+user.username) if user.username != None else ""}'
-    )
+    try:
+        message.reply_html(
+            f'{mention(user.id, user.full_name if user.full_name != None else user.title)}'
+            f'\nID: <code>{user.id}</code>'
+            f'\n{("@"+user.username) if user.username != None else ""}'
+        )
+    except:
+        message.reply_text("User not found.")
 
 
 def main():
