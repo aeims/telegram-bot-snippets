@@ -3,6 +3,7 @@
 # This program is dedicated to the public domain under the CC0 license.
 
 # IMPORTANT WARNING: DO NOT CHANGE HANDLERS ORDER OR THE BOT WILL NOT WORK PROPERLY!
+# IMPORTANT: MAKE SURE BOT IS ADMIN IN THE CHANNEL WITH ALL PRIVILAGES.
 
 # About:
 # Asks a user that started the bot 
@@ -12,7 +13,7 @@
 
 # Usage:
 # Add your bot to your channel and make it admin with all privilages.
-# Make sure to paste bot token and channel username or id to the code where needed.
+# Make sure to paste bot token and channel username to the code where needed.
 # run the program and send /start or /help to bot.
 # Bot will check the channel to see if you are a member of channel or not.
 
