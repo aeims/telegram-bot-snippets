@@ -31,8 +31,8 @@ def id_disply(update: Update, context: CallbackContext):
     args = context.args
     if args and args[0].isdecimal() and len(args[0]) > 7:
         user = context.bot.get_chat_member(message.chat_id, int(args[0])).user
-    elif 'text_mention' in (msg_entities := tuple(map(lambda x: x.type, message.entities))):
-        user = message.entities[msg_entities.index('text_mention')].user
+    elif entity := message.parse_entities('text_mention'):
+        user = tuple(entity.keys())[0].user
     elif message.reply_to_message:
         if fwd_usr := message.reply_to_message.forward_from:
             user = fwd_usr
