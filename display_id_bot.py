@@ -23,7 +23,8 @@ from telegram.ext import (
     CommandHandler, 
 )
 
-BOT_TOKEN = "123456789:ABCDEFGHaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+# Create bot and get your token from telegram @botfather 
+BOT_TOKEN = ""
 
 
 def id_disply(update: Update, context: CallbackContext):
